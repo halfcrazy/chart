@@ -226,6 +226,24 @@ rules:
   - watch
   - create
   - delete
+- apiGroups:
+  - bmc.kubevirt.io
+  resources:
+  - virtualmachinebmcs
+  verbs:
+  - get
+- apiGroups:
+  - bmc.kubevirt.io
+  resources:
+  - virtualmachinebmcs/status
+  verbs:
+  - update
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - get
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
